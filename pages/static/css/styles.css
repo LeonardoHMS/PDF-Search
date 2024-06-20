@@ -1,0 +1,338 @@
+/* 
+<!-- Desenvolvido por Leonardo Mantovani -->
+<!-- GitHub: https://github.com/LeonardoHMS -->
+<!-- Linkedin: https://www.linkedin.com/in/leonardohms/ -->
+*/
+
+* {
+    font-family: 'Roboto Slab', Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+button {
+    padding: .6rem 1.2rem;
+    background-color: #333333;
+    color: #fff;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+    transition: 0.4s;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.loading-page {
+    margin-top: 2rem;
+    height: 100vh;
+    width: 100vw;
+}
+
+.loading-page h1 {
+    text-align: center;
+}
+
+/*Tabela*/
+.style-tabela {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.style-tabela table {
+    float:left;
+    width: 100%;
+    border:1px solid #ccc;
+    border-bottom:0;
+    border-right:0;
+    font-size:0.8em;
+}
+
+.style-tabela table tr td {
+    padding:0.5em;
+    border:1px solid #ccc;
+    border-top:0;
+    border-left:0;
+    text-overflow: ellipsis;
+}
+
+.style-tabela table td.top {
+    background-color:#00bcc4;
+    color:#fff;
+    font-size:1.2em;
+}
+
+.style-tabela table td.top.center {
+    text-align: center;
+}
+
+.style-tabela table td.total {
+    text-align:left;
+    font-weight: bold;
+}
+
+.style-tabela table td.top-toltip {
+    background-color:#207d97;
+    height:25px;
+    color:#fff;
+    font-size:16px;
+}
+
+.style-tabela tbody tr td {
+    padding:0.3em;
+    border:1px solid #ccc;
+    border-top:0;
+    border-left:0;
+}
+
+.style-tabela tbody tr {
+    background-color:#fff;
+    color:#666;
+}
+
+.style-tabela tbody tr:hover {
+    background-color:#f4f4f4;
+    color:#00bcc4;
+}
+
+.style-tabela tbody tr td .editar {
+    color:#00d549;
+    font-size:1.2em;
+    font-weight:bold;
+    display:inline;
+    text-decoration:none;
+}
+
+.style-tabela tbody tr td .deletar {
+    color:#bf303c;
+    font-size:1.2em;
+    font-weight:bold;
+    display:inline;
+    text-decoration:none;
+}
+
+.style-tabela tbody tr.mensagemAlerta {
+    background-color:#fdeeef;
+    color:#bf303c;
+}
+
+
+/*Classe adicionada no jquery*/
+#tabela tr.impar {
+    background:#f4f4f4;
+}
+
+#tabela tr.par {
+    background:#f1fafb;
+}
+
+.style-tabela button {
+	background: none;
+	border: none;
+	padding: 0;
+	font: inherit;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    position: relative;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    color: black;
+    transition: all 300ms ease-in-out;
+}
+
+.buttons button::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+}
+
+.buttons button:hover {
+    transform: scale(1.03, 1.03);
+    color: blue;
+    background: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+}
+
+.buttons button:hover::after {
+    opacity: 1;
+}
+
+.buttons img {
+    width: 1rem;
+    height: 1rem;
+}
+
+/*Se vocÊ Quiser Remover o script e usar só o Css Desabilite aqui*/
+/*#tabela tr:nth-child(odd)  { background-color:#ccc; }*/  
+/*#tabela tr:nth-child(even) { background-color:#f4f4f4; } */
+/*Tabela*/
+
+.divSearch {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.divSearch button {
+    background-color: #2086c2;;
+}
+
+.divSearch button:hover {
+    cursor: pointer;
+}
+
+.divSearch input {
+    width: 20rem;
+    padding: .5rem;
+    border-radius: .4rem;
+    border: 2px solid #666;
+    font-size: 1.2rem;
+}
+
+.sheet-process {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    background-color: #b3b1b1;
+    border-radius: 0px 25px 0px 25px;
+}
+
+.sheet-process button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.message {
+    font-family: sans-serif;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.update p {
+    margin: 1rem;
+}
+
+.message-not-found h2{
+    padding-top: 1rem;
+}
+
+.message-intro p{
+    padding-bottom: 1rem;
+}
+
+#fade,
+#modal {
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+}
+
+#modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    max-width: 90%;
+    max-height: 98%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body {
+    width: 100%;
+    height: 95%;
+    margin-bottom: 1rem;
+}
+
+#modal.hide,
+#fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide {
+    top: 0;
+}
+
+.pdf-body {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+.contato-intro, .contato-link {
+    float: left;
+}
+
+.contato-link {
+    margin-left: 1rem;
+}
+
+.contato-link a {
+    margin-left: .5rem;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Desenvolvido por Leonardo Mantovani -->
+<!-- GitHub: https://github.com/LeonardoHMS -->
+<!-- Linkedin: https://www.linkedin.com/in/leonardohms/ -->
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="static/css/styles.css">
+   <link rel="shortcut icon" href="static/img/logo.ico">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      integrity="sha512-9YHSK59/rjvhtDcY/b+4rdnl0V4LPDWdkKceBl8ZLF5TB6745ml1AfluEU6dFWqwDw9lPvnauxFgpKvJqp7jiQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      integrity="sha512-yDUXOUWwbHH4ggxueDnC5vJv4tmfySpVdIcN1LksGZi8W8EVZv4uKGrQc0pVf66zS7LDhFJM7Zdeow1sw1/8Jw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@800&display=swap"
+      rel="stylesheet">
+   <title>PDF's da Rede</title>
+</head>
+
+<body>
+   <div class="loading-page" id="loading-page">
+      <h1>PDF Search - Lista de PDF's</h1>
+      <h1>Carregando...</h1>
+   </div>
+   <div>
+      <div class="divSearch">
+         <input id="input-search" type="search" placeholder="Procurar um PDF">
+         <button type="submit" onclick="search(document.getElementById('input-search'))">Buscar</button>
+         <button type="submit" onclick="restaure('')">Restaurar</button>
+      </div>
+   </div>
+   <div id="fade" class="hide"></div>
+   <div id="modal" class="hide">
+      <div class="modal-header">
+         <button id="close-modal">Fechar</button>
+      </div>
+      <div class="modal-body">
+         <embed class="pdf-body" src="" type="application/pdf">
+      </div>
+   </div>
+   <div class="message message-intro" id="message-intro-id">
+      <h1>PDF Search - Buscador de arquivos PDF</h1>
+      <p>Desenvolvido por Leonardo Mantovani</p>
+      <div class="">
+         <div class="contato-intro">
+            <h2>Contato:</h2>
+         </div>
+         <div class="contato-link">
+            <a href="https://www.github.com/LeonardoHMS/" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/leonardohms/" target="_blank"><i
+                  class="fa-brands fa-linkedin fa-2x"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=14998433191&text=Oi%20Leonardo" target="_blank"><i
+                  class="fa-brands fa-whatsapp fa-2x"></i></a>
+         </div>
+      </div>
+
+   </div>
+   <div class="message message-not-found" id="message-not-found-id">
+      <h1>Nenhum arquivo encontrado :(</h1>
+      <h2>Não encontrei seu arquivo, mas você pode solicitar inserindo as informações na planilha do caminho abaixo.
+      </h2>
+      <div class="sheet-process">
+         <p id="sheet">C://Windows/Pasta de Teste/Arquivo.xlsx</p>
+         <button onclick="CopyText(document.querySelector('#sheet').textContent)"><img src="static/img/copy_icon.png"
+               alt="Copiar"></button>
+      </div>
+      <h2>Ou atualize a página, caso ela esteja desatualizada.</h2>
+   </div>
+   <div class="style-tabela" id="pdf-table">
+      <table id="tabela" border="0" cellpadding="0" cellspacing="0">
+         <thead>
+            <tr id="thead-display" class="header-table">
+               <td class="top center" style="width: 8%;">Index</td>
+               <td class="top center" style="width: 5%;"><strong>Nome Arquivo</strong></td>
+               <td class="top center column-media" style="width: 82%;">Local do Arquivo</td>
+            </tr>
+         </thead>
+         <tbody>

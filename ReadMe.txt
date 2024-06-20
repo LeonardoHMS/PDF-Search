@@ -2,6 +2,14 @@ PDF Search - Developed by Leonardo Mantovani
 GitHub: https://github.com/LeonardoHMS
 Linkedin: https://www.linkedin.com/in/leonardohms/
 
+ ____  _____   ______        _____  
+|  _ \|  __ \ |  ____|      / ____|
+| |_) | |  | || |__        | (___    ___   __ _  _ __  ____  _    _
+|  __/| |  | ||  __|        \ ___\  / _ \ / _` || '__|/  __\| |__| |
+| |   | |__| || |           ____) ||  __/| (_| || |  |  \___|  __  |
+|_|   |_____/ |_|          |_____/  \___| \__,_||_|   \____/|_|  |_|  By:Leonardo Mantovani
+
+
 ######### Português(BR) #########
 
 Antes de iniciar o programa, primeiramente deve ser configurado os Arquivos Json:

@@ -2,12 +2,17 @@ PDF Search - Developed by Leonardo Mantovani
 GitHub: https://github.com/LeonardoHMS
 Linkedin: https://www.linkedin.com/in/leonardohms/
 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/LeonardoHMS/OP-Calculadora/blob/main/LICENSE)
+
  ____  _____   ______        _____  
 |  _ \|  __ \ |  ____|      / ____|
 | |_) | |  | || |__        | (___    ___   __ _  _ __  ____  _    _
 |  __/| |  | ||  __|        \ ___\  / _ \ / _` || '__|/  __\| |__| |
 | |   | |__| || |           ____) ||  __/| (_| || |  |  \___|  __  |
 |_|   |_____/ |_|          |_____/  \___| \__,_||_|   \____/|_|  |_|  By:Leonardo Mantovani
+
+
+![Window1](https://github.com/LeonardoHMS/PDF-Search/blob/main/assets/PDFInfo.png)
 
 
 ######### Português(BR) #########
